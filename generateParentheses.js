@@ -10,12 +10,12 @@ const generateParenthesis = function (n) {
             resultado.push(str);
             return;
         }
-        if (open < n) {
-            backtracking(str + "(", open + 1, close);
-        }
-        if (close < open) {
-            backtracking(str + ")", open, close + 1);
-        }
+            if (open < n) {
+                backtracking(str + "(", open + 1, close);
+            }
+            if (close < open) {
+                backtracking(str + ")", open, close + 1);
+            }
     }
     backtracking("", 0, 0);
     return resultado;
